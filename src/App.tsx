@@ -4,6 +4,7 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import Confess from './pages/Confess';
 import Gallery from './pages/Gallery';
+import Admin from './pages/Admin';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/confess" element={<Confess />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </div>
     </Router>
