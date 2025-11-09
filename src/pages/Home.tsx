@@ -1,4 +1,3 @@
-import React from 'react';
 import Hero from '../components/Hero';
 import OrganizationalStructure from '../components/OrganizationalStructure';
 import ContactSection from '../components/ContactSection';

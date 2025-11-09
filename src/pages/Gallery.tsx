@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Camera, ImageOff, Eye, X } from 'lucide-react';
@@ -133,7 +132,7 @@ const Gallery = () => {
               
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <p className="text-blue-700 text-sm">
-                  💡 <strong>Info:</strong> Jika kamu memiliki foto kegiatan kelas yang ingin dibagikan, 
+                  <strong>Info:</strong> Jika kamu memiliki foto kegiatan kelas yang ingin dibagikan, 
                   silakan hubungi pengurus kelas untuk menambahkannya ke galeri.
                 </p>
               </div>

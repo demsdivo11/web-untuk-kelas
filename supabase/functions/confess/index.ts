@@ -27,9 +27,10 @@ Deno.serve(async (req) => {
   try {
     // Initialize Supabase client
     const supabaseClient = createClient(
-      Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
-    )
+  Deno.env.get('PROJECT_URL') ?? '',
+  Deno.env.get('SERVICE_ROLE_KEY') ?? ''
+)
+
 
     if (req.method === 'POST') {
       // Create new confession
@@ -63,6 +64,7 @@ Deno.serve(async (req) => {
         .select()
 
       if (error) {
+        console.error('Supabase insert error:', error)
         return new Response(
           JSON.stringify({ error: error.message }),
           { 
@@ -93,6 +95,7 @@ Deno.serve(async (req) => {
         .order('created_at', { ascending: false })
 
       if (error) {
+        console.error('Supabase fetch error:', error)
         return new Response(
           JSON.stringify({ error: error.message }),
           { 
@@ -123,6 +126,7 @@ Deno.serve(async (req) => {
     )
 
   } catch (error) {
+    console.error('Confess function error:', error)
     return new Response(
       JSON.stringify({ error: 'Internal server error' }),
       { 

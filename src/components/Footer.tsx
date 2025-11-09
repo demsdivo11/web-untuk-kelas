@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Heart, Users, Instagram, Mail, Phone } from 'lucide-react';
 
@@ -129,10 +128,10 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-300 text-sm">
-                © {currentYear} Kelas X-5 SMA Negeri 1 Jakarta. All rights reserved.
+                (c) {currentYear} Kelas X-5 SMA Negeri 1 Jakarta. All rights reserved.
               </p>
               <p className="text-gray-400 text-xs mt-1">
-                Dibuat dengan ❤️ oleh siswa-siswi kelas X-5
+                Dibuat dengan penuh semangat oleh siswa-siswi kelas X-5.
               </p>
             </div>
             

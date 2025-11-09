@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Home, Heart, Menu, X, GraduationCap, Camera } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useClassProfile } from '../hooks/useClassProfile';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { displayName } = useClassProfile();
+
+  useEffect(() => {
+    document.title = `${displayName} Website`;
+  }, [displayName]);
 
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
@@ -22,7 +28,7 @@ const Navigation = () => {
               <GraduationCap className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Kelas X-5
+              {displayName}
             </span>
           </Link>
 
